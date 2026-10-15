@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A private, offline password generator. No accounts, tracking, or dependencies.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="generator.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <main>
+      <h1>Password generator</h1>
+      <section class="card" aria-label="Password generator">
+        <div class="output-heading"><label for="password">Password</label><span id="length-badge">20 characters</span></div>
+        <div class="output-row"><input id="password" type="password" readonly autocomplete="off" spellcheck="false" aria-label="Generated password"><button id="reveal" class="icon-button" type="button" aria-label="Show password" aria-pressed="false">Show</button></div>
+        <div class="actions"><button id="generate" type="button" class="primary">Generate password</button><button id="copy" type="button" class="secondary">Copy</button></div>
+        <p id="status" role="status" aria-live="polite"></p>
+        <div class="divider"></div>
+        <div class="length-heading"><label for="length">Password length</label><input id="length-number" type="number" min="4" max="128" step="1" value="20" aria-label="Password length in characters"></div>
+        <input id="length" type="range" min="4" max="128" value="20">
+        <div class="range-labels"><span>4 characters</span><span>128 characters</span></div>
+        <fieldset><legend>Include characters</legend><div class="options">
+          <label class="option"><span><strong>Uppercase</strong><small>A–Z</small></span><input id="uppercase" type="checkbox" checked></label>
+          <label class="option"><span><strong>Lowercase</strong><small>a–z</small></span><input id="lowercase" type="checkbox" checked></label>
+          <label class="option"><span><strong>Numbers</strong><small>0–9</small></span><input id="numbers" type="checkbox" checked></label>
+          <label class="option"><span><strong>Symbols</strong><small>!@#$%</small></span><input id="symbols" type="checkbox" checked></label>
+        </div></fieldset>
+        <label class="exclude"><input id="exclude-ambiguous" type="checkbox"><span>Skip lookalike characters<small>Excludes I, l, 1, O, 0, o and |</small></span></label>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

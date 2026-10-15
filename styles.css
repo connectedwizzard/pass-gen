@@ -1,0 +1,43 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #ededf0;
+  background: #101012;
+  accent-color: #3565db;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 64px 20px; font-size: 14px; }
+main { max-width: 480px; margin: 0 auto; }
+h1 { margin: 0 0 22px; font-size: 25px; font-weight: 650; letter-spacing: -.6px; }
+.card { padding: 26px; background: #1d1d21; border: 1px solid #35353b; border-radius: 14px; box-shadow: 0 6px 24px #00000030; }
+button, input { font: inherit; }
+button { padding: 11px 16px; border: 1px solid #42424a; border-radius: 8px; background: #2a2a30; color: #ededf0; font-weight: 550; cursor: pointer; }
+button:hover { background: #36363e; }
+button:disabled { opacity: .5; cursor: default; }
+button:focus-visible, input:focus-visible { outline: 2px solid #3565db; outline-offset: 3px; }
+.output-heading, .length-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-weight: 550; }
+#length-badge, small, .range-labels { font-size: 12px; color: #aaaab6; font-weight: 400; }
+.output-row { display: flex; gap: 8px; margin: 10px 0 12px; }
+#password { width: 100%; min-width: 0; padding: 13px 12px; border: 1px solid #42424a; border-radius: 8px; background: #161619; color: #eeeeff; font-family: ui-monospace, monospace; font-size: 18px; }
+.icon-button { font-size: 12px; padding: 10px; }
+.actions { display: flex; gap: 8px; }
+.primary { flex: 1; background: #3565db; border-color: #3565db; color: #fff; }
+.primary:hover { background: #2853be; border-color: #2853be; }
+#status { font-size: 12px; line-height: 1.5; margin: 12px 0 0; color: #a8c2ff; }
+#status:empty { display: none; }
+.divider { margin: 24px 0; border-top: 1px solid #35353b; }
+#length-number { width: 66px; padding: 7px; border: 1px solid #42424a; border-radius: 7px; background: #161619; color: #eeeeff; text-align: center; }
+#length { width: 100%; margin: 18px 0 6px; cursor: pointer; }
+.range-labels { display: flex; justify-content: space-between; font-size: 11px; }
+fieldset { border: 0; padding: 0; margin: 24px 0 20px; min-width: 0; }
+legend { padding: 0; margin-bottom: 12px; font-weight: 550; }
+.options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.option { display: flex; flex-direction: row-reverse; justify-content: flex-end; align-items: center; gap: 9px; padding: 11px 10px; border: 1px solid #3b3b43; border-radius: 8px; cursor: pointer; }
+.option:has(input:checked) { border-color: #526ca8; background: #242b3c; }
+.option strong { font-weight: 450; font-size: 13px; }
+.option small { display: block; margin-top: 2px; font-size: 11px; }
+input[type=checkbox] { width: 16px; height: 16px; margin: 0; flex-shrink: 0; cursor: pointer; }
+.exclude { display: flex; align-items: center; gap: 9px; cursor: pointer; font-size: 13px; }
+.exclude small { display: block; margin-top: 3px; font-size: 11px; }
+@media (max-width: 420px) { body { padding: 32px 14px; } .card { padding: 20px; } }
+@media (max-width: 320px) { .options { grid-template-columns: 1fr; } }

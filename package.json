@@ -1,0 +1,8 @@
+{
+  "name": "keymint-password-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An offline, dependency-free browser password generator.",
+  "scripts": { "test": "node --test" },
+  "engines": { "node": ">=22" }
+}
